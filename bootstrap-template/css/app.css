@@ -1,0 +1,19 @@
+/* Font */
+* {
+	font-family: 'Nunito',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+pre {
+	padding: 1em;
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+}
+
+h1.title {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+td .form-check-input {
+	margin-left: 0;
+}
