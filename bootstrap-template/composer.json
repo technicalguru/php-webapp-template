@@ -1,0 +1,21 @@
+{
+    "name": "technicalguru/mywebapp",
+    "description": "WebApp Framework Template Site",
+    "type": "project",
+    "authors": [
+        {
+            "name": "your-username",
+            "email": "name@example.com"
+        }
+    ],
+    "require": {
+        "technicalguru/web-framework": "^1",
+        "twbs/bootstrap": "^4.5",
+        "fortawesome/font-awesome": "^5.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyWebApp\\": "MyWebApp"
+        }
+    }
+}
