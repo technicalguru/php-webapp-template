@@ -1,11 +1,17 @@
 <?php
 
-define('WFW_ROOT_DIR',    __DIR__);
-define('WFW_TIMEZONE',    'Europe/Berlin');
+define('WFW_ROOT_DIR',  __DIR__);
+define('WFW_TIMEZONE', 'Europe/Berlin');
 include WFW_ROOT_DIR.'/vendor/autoload.php';
+// You can also use any other mechanism to detect that you are in debug
+// but beware that the application framework is not yet setup
 $DEBUG = FALSE;
 
-ini_set('display_errors', 'Off');
+if (!$DEBUG) {
+	ini_set('display_errors', 'Off');
+	ini_set('log_errors', 'On');
+}
+
 try {
 	$service = new \WebApp\Service();
 	$service->run();
@@ -15,8 +21,6 @@ try {
 	echo '<h1>Internal Error</h1>';
 	echo '<p>Cannot create application.</p>';
 	if ($DEBUG) {
-		echo '<pre>'.$e->getMessage()."\n".$e->getTraceAsString().'</pre>';
+		echo('<pre>'.\TgUtils\FormatUtils::getTraceAsString($e).'</pre>');
 	}
 }
-
-
